@@ -10,6 +10,7 @@ const initialState: CounterState = {
     name: "Curr Value"
 };
 
+// Async actions
 export const incrementAsync = createAsyncThunk(
     "counter/incrementAsync",
     async (amount: number) => {
@@ -26,6 +27,7 @@ export const decrementAsync = createAsyncThunk(
     }
 );
 
+// Slice with sync reducers and async extraReducers
 const counterSlice = createSlice({
     name: "counter",
     initialState,
